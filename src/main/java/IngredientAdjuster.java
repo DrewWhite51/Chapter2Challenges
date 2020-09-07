@@ -16,14 +16,17 @@ public class IngredientAdjuster {
         
         Scanner keyboard = new Scanner(System.in);
 
-        
-        double oneBatchOfSugar = 1.5;
-        double oneBatchOfButter = 1;
-        double OneBatchOfFlower = 2.75;
-        
-        
+               
         System.out.println("How many cookies do you want to make?");
         double cookieAmounts = keyboard.nextInt();
+        double sugarNeeded = (1.5/48) * cookieAmounts;
+        double butterNeeded = cookieAmounts / 48;
+        double flourNeeded = (2.75/48) *cookieAmounts;
+        
+        System.out.println("Ok, you will need:\n"
+                 + sugarNeeded + " cups of sugar\n"
+                 + butterNeeded + " cups of butter\n"
+                + flourNeeded + " cups of flour");
         
         
 
